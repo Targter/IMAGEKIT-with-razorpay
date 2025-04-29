@@ -67,7 +67,8 @@ export default function ProductPage() {
         productId: product._id,
         variant,
       });
-
+      console.log("Order created............. ",orderId,amount)
+      
       // if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID) {
       //   showNotification("Razorpay key is missing", "error");
       //   return;

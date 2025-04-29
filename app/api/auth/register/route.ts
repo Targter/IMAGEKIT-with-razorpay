@@ -12,9 +12,9 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-
+console.log("caleed1")
     await connectToDatabase();
-
+    console.log("called")
     // Check if user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     await User.create({
       email,
       password,
-      role: "user", // Default role
+      role: "admin", // Default role
     });
 
     return NextResponse.json(

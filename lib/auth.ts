@@ -4,6 +4,7 @@ import bcrypt from "bcryptjs";
 import { connectToDatabase } from "./db";
 import UserModel from "../models/User";
 
+console.log(process.env.NEXTAUTH_SECRET)
 export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
